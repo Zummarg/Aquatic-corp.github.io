@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Aquatic Corporation · Fun Mobile Games</title>
+  <meta name="description" content="Aquatic Corporation creates cheerful, feel‑good mobile games that make players smile—anytime, anywhere." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aquatic Corporation · Fun Mobile Games" />
+  <meta property="og:description" content="We build bright, friendly mobile games for quick smiles and cozy vibes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo.png" />
+  <meta property="og:url" content="https://zummarg.github.io/aquatic-corporation.github.io/" />
+
+  <!-- Favicon (put your logo file next to index.html and name it logo.png) -->
+  <link rel="icon" href="logo.png" />
+
+  <style>
+    :root{
+      --bg: #5a22ff;
+      --bg-2:#2d0bb8;
+      --card:#ffffff;
+      --text:#0e0a2b;
+      --muted:#5e5a7a;
+      --brand:#ffb300;
+      --brand-2:#ffcf4a;
+      --shadow: 0 20px 60px rgba(20, 10, 80, .35);
+      --radius: 22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 80% -10%, var(--bg) 0%, transparent 60%),
+        radial-gradient(1200px 800px at -10% 110%, var(--bg-2) 0%, transparent 55%),
+        linear-gradient(160deg, #6c3bff 0%, #2a169b 100%);
+      background-attachment: fixed;
+    }
+
+    .wrap{max-width:1120px;margin:0 auto;padding:28px}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:8px 0 12px 0;
+    }
+    .brand{
+      display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none;
+    }
+    .brand img{
+      width:56px;height:56px;border-radius:16px;object-fit:cover;
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
+      background:#ffdf7a;
+    }
+    .brand h1{font-size:22px;line-height:1;margin:0}
+    .links a{
+      color:#fff;text-decoration:none;font-weight:600;opacity:.9;margin-left:18px
+    }
+    .links a:hover{opacity:1;text-decoration:underline}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{
+      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;
+      padding:38px;
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;padding:26px}
+      header{flex-wrap:wrap}
+      .links{width:100%;text-align:right}
+    }
+
+    .hero h2{
+      margin:0 0 12px 0;
+      font-size:clamp(28px, 4.2vw, 48px);
+      letter-spacing:-.02em;
+    }
+    .hero p{margin:0 0 22px 0;color:var(--muted);font-size:18px;line-height:1.6}
+
+    .cta{
+      display:flex;gap:14px;flex-wrap:wrap;align-items:center
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 18px;border-radius:14px;font-weight:700;text-decoration:none;
+      border:0;cursor:pointer;transition:transform .08s ease, box-shadow .2s ease;
+    }
+    .btn-primary{
+      background: linear-gradient(180deg, var(--brand), var(--brand-2));
+      color:#6b3a00;box-shadow:0 10px 30px rgba(255,179,0,.35);
+    }
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-ghost{
+      background:#f4f3ff;color:#3b2fd6;border:2px solid #dfdcff;
+    }
+
+    .phone{
+      aspect-ratio:10/16; border:12px solid #10121a; border-bottom-width:18px;
+      border-radius:28px; background:#0a0d25; position:relative;
+      box-shadow:0 20px 50px rgba(10,0,60,.35);
+    }
+    .phone:before{
+      content:""; position:absolute; inset:10px; border-radius:16px;
+      background:
+        radial-gradient(1000px 600px at 0% 100%, #ffd96a 0%, #ff9f1a 60%, transparent 70%),
+        radial-gradient(900px 700px at 100% 0%, #7f5aff 0%, #4a2bd9 60%, transparent 70%),
+        linear-gradient(135deg, #1a114a, #0b0930 60%);
+      filter:saturate(1.2) brightness(1.05);
+    }
+    .trust{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding:26px;background:#faf9ff;border-top:1px solid #efecff
+    }
+    .trust .tile{
+      background:#fff;border:1px solid #efecff;border-radius:16px;padding:16px;text-align:center
+    }
+    .tile h3{margin:6px 0 6px 0;font-size:18px}
+    .tile p{margin:0;color:var(--muted);font-size:14px}
+
+    .footer{
+      color:#fff;opacity:.9;text-align:center;padding:26px;font-size:14px
+    }
+    .footer a{color:#fff}
+    .small{font-size:13px;color:#6f6b94}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#">
+        <!-- Put the provided logo next to this file as "logo.png" -->
+        <img src="logo.png" alt="Aquatic Corporation logo" />
+        <h1>Aquatic Corporation</h1>
+      </a>
+      <nav class="links" aria-label="Top navigation">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+      </nav>
+    </header>
+
+    <main class="card">
+      <section class="hero" id="about">
+        <div>
+          <h2>We make happy little games for busy people</h2>
+          <p>
+            At <strong>Aquatic Corporation</strong> we build bright, bite‑size mobile games
+            that are easy to learn, kind‑hearted, and fun to replay. Our goal is simple:
+            give you a smile in under a minute—on the bus, in a line, or between classes.
+          </p>
+          <p class="small">
+            Family‑friendly vibes, zero drama, quick sessions, and satisfying progress.
+          </p>
+
+          <div class="cta" id="download">
+            <!-- Replace the URL below with your real Google Play link -->
+            <a class="btn btn-primary" href="#" target="_blank" rel="noopener">
+              Get it on Google Play
+            </a>
+            <a class="btn btn-ghost" href="mailto:hello@aquatic.corp">Contact us</a>
+          </div>
+
+          <div style="margin-top:16px">
+            <a href="https://zummarg.github.io/aquatic-corporation.github.io/" target="_blank" rel="noopener">Privacy Policy</a>
+            &nbsp;•&nbsp;
+            <a href="https://zummarg.github.io/Airsmile-Account-Deletion-Instructions/" target="_blank" rel="noopener">Account Deletion Instructions</a>
+          </div>
+        </div>
+
+        <div class="phone" aria-hidden="true"></div>
+      </section>
+
+      <section class="trust" id="features">
+        <div class="tile">
+          <h3>Pick‑up &amp; play</h3>
+          <p>No manuals—just tap, smile, repeat. Perfect for short breaks.</p>
+        </div>
+        <div class="tile">
+          <h3>Cozy aesthetic</h3>
+          <p>Warm colors, soft sounds, and positive feedback—feel good fast.</p>
+        </div>
+        <div class="tile">
+          <h3>Fair &amp; friendly</h3>
+          <p>Play at your pace. No pressure, only good vibes and progress.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <span id="y"></span> Aquatic Corporation ·
+      <a href="https://zummarg.github.io/aquatic-corporation.github.io/" target="_blank" rel="noopener">Privacy Policy</a> ·
+      <a href="https://zummarg.github.io/Airsmile-Account-Deletion-Instructions/" target="_blank" rel="noopener">Account Deletion</a>
+    </footer>
+  </div>
+
+  <script>
+    // Current year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Optional: basic Organization structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Aquatic Corporation",
+    "url": "https://zummarg.github.io/aquatic-corporation.github.io/",
+    "logo": "https://zummarg.github.io/aquatic-corporation.github.io/logo.png",
+    "sameAs": [
+      "https://play.google.com/store"
+    ]
+  }
+  </script>
+</body>
+</html>
